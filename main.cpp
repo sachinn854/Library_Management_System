@@ -21,26 +21,26 @@ int main() {
         cin >> choice;
 
         switch (choice) {
-        case 1: {
+       case 1: {
             // Register as a new Member
             cout << "Registering as a Member..." << endl;
-            currentMember.inputMemberData("Member");
+            currentMember.inputMemberData("Member", library.members);
             library.registerUser(currentMember);
             break;
         }
         case 2: {
             // Register as a new Librarian
             cout << "Registering as a Librarian..." << endl;
-            currentMember.inputMemberData("Librarian");
+            currentMember.inputMemberData("Librarian", library.members);
             library.registerUser(currentMember);
             break;
         }
         case 3: {
             // Login as a Member
-            int memberID;
+            string memberID; // Change to string
             string memberEmail;
             cout << "Enter Member ID: ";
-            cin >> memberID;
+            cin >> memberID; // Read as string
             cout << "Enter Member Email: ";
             cin >> memberEmail;
 
@@ -104,10 +104,10 @@ int main() {
         }
         case 4: {
             // Login as a Librarian
-            int librarianID;
+            string librarianID; // Change to string
             string librarianEmail;
             cout << "Enter Librarian ID: ";
-            cin >> librarianID;
+            cin >> librarianID; // Read as string
             cout << "Enter Librarian Email: ";
             cin >> librarianEmail;
 
